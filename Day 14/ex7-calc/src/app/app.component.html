@@ -1,0 +1,12 @@
+<h1>Hello and welcome to angular calculator </h1>
+<div>
+  <input #myInput1 (input)="setValueFromInputForNumber1(myInput1.value)">
+  <input #myInput2 (input)="setValueFromInputForNumber2(myInput2.value)">
+  <br>
+  <button (click)="calculateResult()">Calculate </button><br>
+  <div *ngIf="showRes" >
+    {{number1}} + {{number2}} = {{resOfAdd}}<br>
+    {{number1}} * {{number2}} = {{resOfMultiply}}<br>
+    {{number1}} - {{number2}} = {{resOfSubstract}}<br>
+  </div>
+</div>
