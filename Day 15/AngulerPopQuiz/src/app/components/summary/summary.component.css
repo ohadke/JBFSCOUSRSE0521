@@ -1,0 +1,31 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+}
+
+.past-question {
+    height: 100px;
+    margin: 10px;
+    border: 1px solid rgba(216, 211, 219, 0.7);
+    border-radius: 10px;
+}
+
+.past-question.right {
+    background-color: lightgreen;
+    color: darkgreen;
+}
+
+.past-question.wrong {
+    background-color: lightsalmon;
+    color: darkred;
+}
+
+h4 {
+    margin: 4px
+}
+
+p {
+    margin: 4px
+}
