@@ -1,0 +1,8 @@
+<div class="x">
+  <div class="lists" *ngFor="let list of (lists$ | async); let i = index"
+  (click)="goToList((list.id))" >
+    <i [style.color]="list.color" class="wrapper-u-active"> {{list.image}} </i>
+    {{list.caption}}
+  </div>
+  <button (click)="addList()">Add <a href=""></a> new list</button>
+  </div>

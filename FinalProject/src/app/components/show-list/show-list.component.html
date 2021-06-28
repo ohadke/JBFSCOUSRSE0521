@@ -1,0 +1,55 @@
+<ng-container *ngIf="(list$|async) as list">
+  <label class="title">
+    Lists > {{list.caption}}
+  </label>
+
+
+  <div class="row">
+    <span class="fas wrapper-u" [style.color]="list.color">{{list.image}}</span>
+
+    <div class="decrease" *ngIf="!showAskDelete">
+      <label>{{list.description}}</label>
+      <div class="buttons">
+          <button class="SelectedButton" (click)="addList()">Add New List...</button>
+          <button class="SelectedButton" (click)="editList(list.id)">Edit List</button>
+          <button class="SelectedButton" (click)="askDelete()">Delete List</button>
+      </div>
+    </div>
+
+    <div class="decrease" *ngIf="showAskDelete">
+      <label [style.color]="'red'">Are you sure to delete the entire list?</label>
+      <div class="buttons">
+          <button class="SelectedButton" (click)="cancelDelete()">Cancel</button>
+          <button class="SelectedButton" (click)="deleteList(list.id)">Delete List</button>
+      </div>
+    </div>
+
+  </div>
+  <ng-container>
+    <div *ngFor="let item of (items$|async)">
+      <app-todo-item-presenter
+        [caption]="item.caption"
+        [isCompleted]="item.isCompleted"
+        (complete)="updateItem(item , $event)">
+      </app-todo-item-presenter>
+    </div>
+  </ng-container>
+
+
+  <div class ="row">
+    <input class="input-item" [formControl]="newItemControl">
+    <button
+    [disabled]="!newItemControl.valid"
+    (click)="addNewItem(list.id)"
+    class="fas wrapper-x addNewButton"
+    [style.color]="newItemControl.valid? 'blue' : 'gray'">
+    </button>
+
+  </div>
+  <div>
+    <!--<app-errors-presenter  [errors]="newItemControl.errors"></app-errors-presenter>-->
+   </div>
+
+</ng-container>
+
+

@@ -1,0 +1,31 @@
+<div class="top">
+  <h2>Welcome To My Todo App</h2>
+  <h3>By {{name}}</h3>
+  <p>{{date| date: 'dd/MM/yyyy'}}</p>
+  <div class="row">
+    <button (click)="createNewList()">Create a New List</button>
+    <button (click)="goToLists()">View All Lists</button>
+    <button (click)="goToItems()">View All Items</button>
+  </div>
+</div>
+
+
+<div class="content">
+  <div class="list">
+    <i class="fas fas-list"> &#xf0ca; </i>
+    <span>{{listNumber$|async}}</span>
+    <span>Lists</span>
+  </div>
+
+  <div class="todo">
+    <i class="fas fas-todo"> &#xf00c;</i>
+    <span>{{itemNumber$|async}}</span>
+    <span>Todo Items</span>
+  </div>
+  <div class="active">
+    <i class="fas fas-active"> &#xf252; </i>
+    <span>{{activeItemNumber$|async}}</span>
+    <span>Active Items</span>
+  </div>
+
+</div>
