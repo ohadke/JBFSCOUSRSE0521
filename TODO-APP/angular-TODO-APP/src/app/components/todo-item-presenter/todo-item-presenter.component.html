@@ -1,0 +1,12 @@
+
+<div class="task" >
+  <input type="checkbox" value="{caption}" (change)="updateCheckList()" [checked]="isCompleted">
+<label
+[style.text-decoration]="isCompleted? 'line-through' : 'none'"
+[style.opacity]="isCompleted? '0.5' : '1'"
+class="item-text"
+>
+  {{caption}}
+
+</label>
+</div>

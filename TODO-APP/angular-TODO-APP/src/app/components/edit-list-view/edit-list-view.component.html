@@ -1,0 +1,39 @@
+
+
+
+
+  <form *ngIf="listForm" [formGroup]="listForm" (ngSubmit)="saveData()">
+    <div class="inputs">
+
+      <div>Caption</div>
+      <div *ngIf="get('caption') as field">
+       <input formControlName="caption" >
+      <app-error-presenter [errors]="field.errors"></app-error-presenter>
+      </div>
+
+      <div>Description</div>
+      <div *ngIf="get('description') as field">
+        <textarea formControlName="description" ></textarea>
+        <app-error-presenter [errors]="field.errors" ></app-error-presenter>
+       </div>
+
+      <div>Icon</div>
+      <div>
+        <select class="fas " formControlName="image">
+        <option class="fas" [style.font-size.px]="'22'" *ngFor="let icon of iconList" [value]="icon" >{{icon}}
+        </option>
+      </select>
+      </div>
+
+      <div>Color</div>
+      <div>
+        <select [style.color]="listForm.value.color" [value]="listForm.value.color" formControlName="color">
+          <option [style.color]="color"  *ngFor="let color of colorList" [value]="color">{{color}}</option>
+        </select>
+      </div>
+
+    </div>
+    <p>
+      <button class ="savebutton" [disabled]="listForm.invalid">Save List</button>
+    </p>
+  </form>

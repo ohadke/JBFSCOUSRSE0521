@@ -1,0 +1,17 @@
+.task{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10px;
+  cursor:pointer;
+}
+
+.item-text{
+  margin-left: 12px;
+  cursor:pointer;
+}
+input{
+  margin-left: 12px;
+  cursor:pointer;
+
+}

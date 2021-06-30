@@ -1,0 +1,23 @@
+
+.inputs{
+  margin: 30px;
+  width: 220px;
+  font-weight: bold;
+}
+
+input, textarea {
+  outline: 1px transparent;
+}
+
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 3px  rgb(207, 9, 9);
+}
+
+.savebutton {
+  margin: 30px;
+  width: 220px;
+  font-weight: bold;
+
+}
