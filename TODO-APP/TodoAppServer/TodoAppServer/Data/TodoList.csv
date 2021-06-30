@@ -1,0 +1,5 @@
+id,caption,description,image,color
+0,hey hey ,hey hey hey hey hey hey hey hey hey hey ,,steelblue
+0,yossi ,yossi yossi yossi yossi yossi yossi yossi yossi yossi yossi ,,magenta
+0,yossi yossi yossi yossi yossi ,yossi yossi yossi yossi yossi yossi yossi yossi yossi yossi ,,steelblue
+0,(click)="goToList((list.id)) (click)="goToList((list.id)), hamahamahamahama hama hamahama hamahama hamahamahamahama hama hama hama hama hama hama,,steelblue
